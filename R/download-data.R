@@ -15,6 +15,10 @@ df_pkmn <- read_csv(path("pokemon.csv")) %>%
   select(-order, -is_default) %>% 
   rename(pokemon = identifier)
 
+df_gen <- read_csv(path("pokemon_species.csv")) %>% 
+  select(1,3) %>% 
+  mutate(generation_id = ifelse(is.na(generation_id), 0, generation_id))
+
 df_stats <- read_csv(path("stats.csv")) %>% 
   rename(stat_id = id) %>% 
   right_join(
@@ -109,9 +113,10 @@ df <- df_pkmn %>%
   left_join(df_stats, by = "id") %>% 
   left_join(rename(df_color, type_1 = type, color_1 = color), by = "type_1") %>% 
   left_join(rename(df_color, type_2 = type, color_2 = color), by = "type_2") %>% 
-  left_join(df_color_f, by =  c("color_1", "color_2")) %>% 
+  left_join(df_color_f, by =  c("color_1", "color_2"))%>% 
   left_join(df_egg, by = "species_id") %>% 
   left_join(df_img, by = "id") %>% 
-  left_join(df_icon, by = "id")
+  left_join(df_icon, by = "id") %>% 
+  left_join(df_gen, by = "id")
 
 write_rds(df, path = "data-raw/df_pkmn.rds")

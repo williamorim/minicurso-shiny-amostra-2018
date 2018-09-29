@@ -1,0 +1,127 @@
+---
+title: "Minicurso de R: Shiny"
+subtitle: "13ª aMostra de Estatística"
+author: "William Amorim"
+date: "3 de outubro de 2018"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+<br>
+
+# Sobre mim
+
+- IME-USP (2007-2019)
+
+--
+
+<img src="img/ime.png" style="position: fixed; top: 50px; right: 75px; z-index: 1;" width="200px">
+
+--
+
+<img src="img/taca.jpg" style="position: fixed; top: 490px; left: 75px; z-index: 1;" width="200px">
+
+--
+
+<br>
+
+- Pesquisa em poluição do ar
+   - Blog: [www.rpollution.com](www.rpollution.com)
+
+<img src="img/rpollution.png" style="position: fixed; top: 280px; right: 100px; z-index: 1; width: 18%;">
+
+--
+
+<br>
+
+- Curso-R
+
+<img src="img/cursor.png" style="position: fixed; top: 490px; right: 60px; z-index: 1; width: 30%;">
+
+---
+
+# Sobre o Shiny
+
+<img src="img/ciclo.png" style=" display: block; margin-left: auto; margin-right: auto;">
+
+---
+
+# Sobre o Shiny
+
+<img src="img/como-funciona.jpg" style=" display: block; margin-left: auto; margin-right: auto;">
+
+---
+
+# Neste minicurso
+
+Vamos:
+
+- Falar como construir a interface do usuário e como conectá-la com o servidor.
+- Falar o que é reatividade e como ela funciona.
+- Falar como customizar do app.
+
+Não vamos:
+
+- Falar de tópicos mais avançados, como [modularização](https://shiny.rstudio.com/articles/#modules), [debbuging](https://shiny.rstudio.com/articles/debugging.html), [tratamento de erros](https://shiny.rstudio.com/articles/#code-quality) e [testes automatizados](https://shiny.rstudio.com/articles/#testing).
+
+- Falar (com detalhes) sobre [Shiny server](https://www.rstudio.com/products/shiny/shiny-server/), [shinyapp.io](https://www.shinyapps.io/) e outras formas de hospedagem.
+
+---
+
+# Para aprender mais
+
+- Para começar: https://shiny.rstudio.com/tutorial/
+
+- Para se aprimorar: https://shiny.rstudio.com/articles/
+
+- Para se inspirar: https://shiny.rstudio.com/gallery/
+
+<br>
+
+<img src="img/cat_book.gif" style=" display: block; margin-left: auto; margin-right: auto;">
+
+---
+
+# Motivação
+
+- Vamos construir um app do zero.
+
+--
+
+<img src="img/farfetch.png" style="position: fixed; top: 200px; right: 20px; z-index: 1;">
+
+--
+
+- Variáveis numéricas:
+   - Peso, altura
+   - HP, ataque, defesa, velocidade
+
+--
+
+- Variáveis categóricas:
+   - tipo, região/geração
+
+--
+   
+- Cor
+
+--
+
+- Imagens
+
+---
+# Vamos ao R!
+
+<br>
+<br>
+
+<img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" style=" display: block; margin-left: auto; margin-right: auto;" width = "300" height = "300">
