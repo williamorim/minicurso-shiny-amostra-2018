@@ -77,7 +77,7 @@ url_icon <-  url_bulbapedia_list %>%
 
 df_icon <- data_frame(id, url_icon) %>% 
   filter(!is.na(id)) %>% 
-  distinct(id)
+  distinct(id, .keep_all = TRUE)
 
 df_color <- map_df(
   na.omit(unique(c(df_type$type_1, df_type$type_2))), 
@@ -117,6 +117,29 @@ df <- df_pkmn %>%
   left_join(df_egg, by = "species_id") %>% 
   left_join(df_img, by = "id") %>% 
   left_join(df_icon, by = "id") %>% 
-  left_join(df_gen, by = "id")
+  left_join(df_gen, by = "id") %>% 
+  select(
+    id,
+    id_especie = species_id,
+    id_geracao = generation_id,
+    pokemon,
+    altura = height,
+    peso = weight,
+    exp_base = base_experience,
+    tipo_1 = type_1,
+    tipo_2 = type_2,
+    hp,
+    ataque = attack,
+    defesa = defense,
+    ataque_especial = special_attack,
+    defesa_especial = special_defense,
+    velocidade = speed,
+    cor_1 = color_1,
+    cor_2 = color_2,
+    cor_final = color_f,
+    url_imagem = url_image,
+    url_icone = url_icon
+  ) %>% 
+  mutate(peso = peso/10)
 
 write_rds(df, path = "data-raw/df_pkmn.rds")
