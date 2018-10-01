@@ -50,6 +50,9 @@ ui <- dashboardPage(
       type = "text/css",  
       href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
     ),
+    tags$head(
+      tags$link(rel = "stylesheet", type = "text/css", href = "custom.css")
+    ),
     tabItems(
       tabItem(
         tabName = "visao_geral",

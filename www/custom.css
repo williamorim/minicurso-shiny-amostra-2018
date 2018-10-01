@@ -1,0 +1,21 @@
+.skin-blue .main-header .logo {
+    background-color: #4c51bd;
+}
+
+.skin-blue .main-header .navbar {
+
+    background-color: #4c51bd;
+
+}
+
+.main-header .logo {
+  
+  font-family: Pokemon;
+}
+
+
+.skin-blue .main-header .logo {
+  color: #e9f614;
+}
+
+@font-face { font-family: Pokemon; src: url('Pokemon-Solid.ttf'); }

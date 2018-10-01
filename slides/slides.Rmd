@@ -119,6 +119,15 @@ Não vamos:
 - Imagens
 
 ---
+
+# Crédito
+
+<br>
+
+A construção desse dashboard foi inspirada [neste post](http://jkunst.com/r/pokemon-visualize-em-all/) e [neste flexdashboard](http://jkunst.com/flexdashboard-highcharter-examples/pokemon/).
+
+---
+
 # Vamos ao R!
 
 <br>
