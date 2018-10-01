@@ -1,4 +1,4 @@
-criar_value_box <- function(df_gen, var, icone, uni, gen) {
+criar_value_box <- function(df_gen, var, titulo, icone, uni, gen) {
   
   renderInfoBox({
     
@@ -17,7 +17,8 @@ criar_value_box <- function(df_gen, var, icone, uni, gen) {
     
     infoBox(
       value = paste(filtro[,var_name], uni),
-      title = filtro$pokemon,
+      subtitle = filtro$pokemon,
+      title = titulo,
       icon = icon(icone),
       color = "red",
       fill = TRUE

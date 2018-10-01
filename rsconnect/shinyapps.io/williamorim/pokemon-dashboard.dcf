@@ -5,9 +5,9 @@ account: williamorim
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 481150
-bundleId: 1614918
+bundleId: 1614955
 url: https://williamorim.shinyapps.io/pokemon-dashboard/
-when: 1538357303.57384
+when: 1538359181.54544
 asMultiple: FALSE
 asStatic: FALSE
 ignoredFiles: app_hello_word.R|LICENSE|README.md|slides

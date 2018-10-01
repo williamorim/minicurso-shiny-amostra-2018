@@ -310,6 +310,7 @@ server <- function(input, output, session) {
     df_gen = df_tipo, 
     var = peso, 
     uni = "Kg",
+    titulo = "Mais pesado",
     icone = "weight-hanging",
     gen = input$geracoes
   )
@@ -324,6 +325,7 @@ server <- function(input, output, session) {
     df_gen = df_tipo, 
     var = altura, 
     uni = "m",
+    titulo = "Mais alto",
     icone = "long-arrow-alt-up",
     gen = input$geracoes
   )
@@ -338,6 +340,7 @@ server <- function(input, output, session) {
     df_gen = df_tipo, 
     var = hp, 
     uni = "",
+    titulo = "Maior HP",
     icone = "heart",
     gen = input$geracoes
   )
@@ -352,6 +355,7 @@ server <- function(input, output, session) {
     df_gen = df_tipo, 
     var = ataque, 
     uni = "",
+    titulo = "Maior ataque",
     icone = "hand-rock",
     gen = input$geracoes
   )
@@ -366,6 +370,7 @@ server <- function(input, output, session) {
     df_gen = df_tipo, 
     var = defesa, 
     uni = "",
+    titulo = "Maior defesa",
     icone = "shield-alt",
     gen = input$geracoes
   )
@@ -380,6 +385,7 @@ server <- function(input, output, session) {
     df_gen = df_tipo, 
     var = velocidade, 
     uni = "",
+    titulo = "Mais rápido",
     icone = "angle-double-right ",
     gen = input$geracoes
   )
@@ -415,6 +421,7 @@ server <- function(input, output, session) {
     df_gen = df_gen, 
     var = peso, 
     uni = "Kg",
+    titulo = "Mais pesado",
     icone = "weight-hanging",
     gen = input$geracoes
   )
@@ -429,6 +436,7 @@ server <- function(input, output, session) {
     df_gen = df_gen, 
     var = altura, 
     uni = "m",
+    titulo = "Mais alto",
     icone = "long-arrow-alt-up",
     gen = input$geracoes
   )
@@ -443,6 +451,7 @@ server <- function(input, output, session) {
     df_gen = df_gen, 
     var = hp, 
     uni = "",
+    titulo = "Maior HP",
     icone = "heart",
     gen = input$geracoes
   )
@@ -457,6 +466,7 @@ server <- function(input, output, session) {
     df_gen = df_gen, 
     var = ataque, 
     uni = "",
+    titulo = "Maior ataque",
     icone = "hand-rock",
     gen = input$geracoes
   )
@@ -471,6 +481,7 @@ server <- function(input, output, session) {
     df_gen = df_gen, 
     var = defesa, 
     uni = "",
+    titulo = "Maior defesa",
     icone = "shield-alt",
     gen = input$geracoes
   )
@@ -485,6 +496,7 @@ server <- function(input, output, session) {
     df_gen = df_gen, 
     var = velocidade, 
     uni = "",
+    titulo = "Mais rápido",
     icone = "angle-double-right ",
     gen = input$geracoes
   )
