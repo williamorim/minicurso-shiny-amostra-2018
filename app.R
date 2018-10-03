@@ -1,6 +1,5 @@
 library(shiny)
 library(shinydashboard) # install.packages("shinydashboard")
-library(highcharter)
 library(tidyverse)
 
 
